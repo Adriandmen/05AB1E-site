@@ -1,0 +1,24 @@
+from flask_script import Manager
+from config import file_setup
+import app
+
+manager = Manager(app.app)
+
+
+@manager.command
+def compile():
+    file_setup.compile_typescript()
+
+
+@manager.command
+def debug():
+    app.app.run(host="127.0.0.1", port=5000, debug=True, threaded=True)
+
+    
+@manager.command
+def run():
+    app.app.run(host="127.0.0.1", port=5000, debug=False, threaded=True)
+
+
+if __name__ == '__main__':
+    manager.run()
