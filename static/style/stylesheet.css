@@ -1,0 +1,221 @@
+@font-face {
+    font-family: Gotham;
+    src: url(../fonts/gothammedium.ttf);
+}
+
+h1 {
+    padding-left: 48px;
+    font-size: 48px;
+    font-weight: normal;
+}
+
+body {
+    margin: 0;
+    background-color: #242C42;
+    color: white;
+    font-family: 'Gotham';
+    height: 100%;
+}
+
+.code {
+    font-family: 'Gotham';
+}
+
+.header-underline {
+    border-bottom: 4px solid #83C505;
+}
+
+.header-container {
+    height: 70px;
+    padding-top: 32px;
+    background-color: #2D3344;
+}
+
+.header-container p {
+    margin: 0;
+    padding: 0;
+    padding-left: 48px;
+    font-size: 34px;
+    font-weight: normal;
+}
+
+.left-container {
+    background-color: #282D40;
+    height: calc(100% - 132px);
+    width: 50%;
+}
+
+html {
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+.left-editor {
+    left: 0px;
+}
+
+.right-editor {
+    right: -50%;
+    top: calc((-100vh + (102px + 48px * 2)) / 3);
+}
+
+.editor-descriptions {
+    height: 48px;
+    background-color: #242C42;
+    font-style: italic;
+    font-size: 24px;
+}
+
+.editor-description {
+    margin-left: 56px;
+    float: left;
+}
+
+.grid-2 {
+    height: 100%;
+    width: 50%;
+    float: left;
+    line-height: calc(100% * 2);
+}
+
+
+
+.output-description {
+    z-index: 1;
+    height: 48px;
+    background-color: #242C42;
+    font-style: italic;
+    font-size: 24px;
+    margin-top: calc((-100vh + (102px + 48px * 2)) / 3);
+}
+
+.output-box {
+    overflow: hidden;
+    width: calc(100% - 49px);
+}
+
+.editor {
+    position: relative;
+    width: 50%;
+}
+
+.run-button {
+    height: 32px;
+    margin-top: 8px;
+    width: 100px;
+    float: right;
+    font-style: normal;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 32px;
+    font-size: 20px;
+    border-radius: 2px;
+    background-color: #716D7C;
+}
+
+.run-button:hover {
+    background-color: #847F91;
+    cursor: pointer;
+}
+
+.run-button:active {
+    background-color: #5F5C68;
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+
+.overlay {
+    z-index: 1000;
+    background-color: black;
+    opacity: 0.5;
+    position: absolute;
+    height: calc((100vh - (104px + 48px * 2)) / 1.5 + 48px);
+    margin-top: -48px;
+    width: 100%;
+    visibility: hidden;
+}
+
+.loading-animation-container {
+    height: 100px;
+    width: 200px;
+    margin: auto;
+    margin-top: 170px;
+    text-align: center;
+}
+
+.output-placeholder {
+    height: auto;
+    min-height: calc((100vh - (104px + 48px * 2)) / 1.5 - 7px);
+    background-color: #1F283F;
+    border-left: 1px solid #83C505;
+    margin-left: 35px;
+    padding-left: 10px;
+    padding-top: 6px;
+    width: calc(100% - 50px);
+    white-space: pre-wrap;
+    word-break: break-word;
+    font-family: 'Roboto Mono';
+}
+
+.warning-description {
+    float: right;
+    padding-right: 12px;
+    font-style: normal;
+    font-size: 16px;
+}
+
+.output-container {
+}
+
+.info-underline {
+    border-bottom: 1px dashed #83C505;
+    cursor: help;
+}
+
+.grid-1 {
+    height: 100%;
+    width: 100%;
+    float: left;
+    line-height: calc(100% * 2);
+}
+
+.header-grid {
+    
+}
+
+.tab-link {
+    float: right;
+    margin-right: 36px;
+    margin-top: 12px;
+    text-decoration: none;
+    color: white;
+}
+
+.tab-link:enabled {
+    color: white;
+}
+
+.tab-link:hover > .tab-link-underline {
+    width: 100%;
+}
+
+.header-text {
+    float: left;
+}
+
+.tab-link-underline {
+    height: 2px;
+    width: 0;
+    background-color: #83C505;
+    transition-duration: 0.1s;
+    transition-timing-function: cubic-bezier(.11,.7,.27,.98);
+    margin: auto;
+}

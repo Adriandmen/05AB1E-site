@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="../static/script/cookies.js"></script>
+        <script src="../static/script/run_code.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.10/angular.min.js"></script>
+        <script src="../static/script/codemirror/codemirror.js"></script>
+        <link href="../static/script/codemirror/codemirror.css" type="text/css" rel="stylesheet"/>
+        <link href="../static/style/stylesheet.css" type="text/css" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+        <link href="../static/style/animations.css" type="text/css" rel="stylesheet"/>
+    </head>
+    <body>
+        <div class="header-container">
+            <p class="header-text"><span class="header-underline">05</span>AB1E interpreter</p>
+            <a href="https://github.com/Adriandmen/05AB1E">
+                <div class="tab-link">
+                    GITHUB
+                    <div class="tab-link-underline"></div>
+                </div>
+            </a>
+            <a href="#">
+                <div class="tab-link">
+                    TUTORIAL
+                    <div class="tab-link-underline"></div>
+                </div>
+            </a>
+            <a href="#">
+                <div class="tab-link">
+                    DOCS
+                    <div class="tab-link-underline"></div>
+                </div>
+            </a>
+            <a href="#">
+                <div class="tab-link">
+                    INTERPRETER
+                    <div class="tab-link-underline"></div>
+                </div>
+            </a>
+        </div>
+        <div class="editor-descriptions">
+            <div class="grid-2">
+                <span class="editor-description">CODE</span>
+                <div id="run-button" class="run-button noselect" onclick="run_code()">Run</div>
+            </div>
+            <div class="grid-2">
+                <span class="editor-description">INPUT</span>
+            </div>
+        </div>
+        <div id="code-editor" class="left-editor editor"></div>
+        <div id="input-editor" class="right-editor editor"></div>
+        
+        <div class="output-description">
+            <div class="grid-1">
+                <span class="editor-description">OUTPUT</span>
+                <span class="warning-description" id="warning-description"></span>
+            </div>
+        </div>
+        
+        <div class="output-container">
+            <div id="output-overlay" class="overlay">
+                <div class="loading-animation-container">
+                    <div class="rect1"></div>
+                    <div class="rect2"></div>
+                    <div class="rect3"></div>
+                    <div class="rect4"></div>
+                    <div class="rect5"></div>
+                </div>
+            </div>
+            <div class="output-placeholder" id="output-display"></div>
+        </div>
+        <script src="../static/script/codemirror-config.js"></script>
+    </body>
+</html>
